@@ -1,0 +1,16 @@
+{
+    "name": "tab",
+    "version": "0.0.1",
+    "root": "kjui",
+    "description": "tab",
+    "author": "Stone Lee <istonelee@gmail.com> (http://stonelee.info)",
+    "dependencies": {
+        "$": "$",
+        "widget": "arale/widget/1.0.2/widget",
+        "switchable": "arale/switchable/0.9.11/switchable"
+    },
+    "tests": ["tab"],
+    "output": {
+        "tab.js": "."
+    }
+}
