@@ -4,11 +4,23 @@
     'seajs', 'moment', 'async', 'store', 'swfobject', 'backbone', 'raphael'
   ];
 
+  var KJUI_MODULES = [
+    'tree','accordion','tab'
+  ];
+
   var ALIPAY_BASE = 'http://static.alipayobjects.com/';
   var ARALE_BASE = 'http://aralejs.org/source/';
+  var KJUI_BASE = 'https://raw.github.com/stonelee/kjui/master/';
 
   var mapRules = [], coverRule = [];
   mapRules.push(function(url) {
+    // KJUI_MODULES 从 kjui 加载
+    for (var i = 0; i < KJUI_MODULES.length; i++) {
+      if (url.indexOf(KJUI_MODULES[i] + '/') > 0) {
+        url = url.replace('kjui/', '');
+        return url.replace(ARALE_BASE, KJUI_BASE);
+      }
+    }
 
     // CDN_MODULES 直接从 alipay 的 cdn 上加载
     for (var i = 0; i < CDN_MODULES.length; i++) {
@@ -36,14 +48,16 @@
     mapRules = mapRules.concat(coverRule);
   }
 
+  var jqueryPath = (seajs._nicodebug ? '/sea-modules' : 'http://static.alipayobjects.com');
+
   seajs.config({
     base: ARALE_BASE,
     alias: {
-      '$': 'http://static.alipayobjects.com/gallery/jquery/1.7.2/jquery.js',
-      '$-debug': 'http://static.alipayobjects.com/gallery/jquery/1.7.2/jquery-debug.js',
+      '$': jqueryPath + '/gallery/jquery/1.7.2/jquery.js',
+      '$-debug': jqueryPath + '/gallery/jquery/1.7.2/jquery-debug.js',
 
-      'jquery': 'http://static.alipayobjects.com/gallery/jquery/1.7.2/jquery',
-      'jquery-debug': 'http://static.alipayobjects.com/gallery/jquery/1.7.2/jquery-debug.js'
+      'jquery': jqueryPath + '/gallery/jquery/1.7.2/jquery',
+      'jquery-debug': jqueryPath + '/gallery/jquery/1.7.2/jquery-debug.js'
     },
     preload: [
       'seajs/plugin-json',
