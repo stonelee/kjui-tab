@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Tab - tab</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="nico 0.2.4" />
+    <meta name="generator" content="nico 0.2.2" />
     <link type="image/x-icon" href="./static/css/favicon.ico" rel="icon">
     <link rel="stylesheet" href="./static/css/normalize.css" />
     <link rel="stylesheet" href="./static/css/site.css" />
@@ -16,16 +16,16 @@
   _gaq.push(['_setAccount', 'UA-36247332-1']);
   _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = 'https://ssl.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  <!--(function() {-->
+    <!--var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;-->
+    <!--ga.src = 'https://ssl.google-analytics.com/ga.js';-->
+    <!--var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);-->
+  <!--})();-->
 </script>
 <script>
   (function() {
     var data;
-    seajs._package = data = {"name":"tab","version":"0.0.1","root":"kjui","description":"tab","author":"Stone Lee <istonelee@gmail.com> (http://stonelee.info)","dependencies":{"$":"$","widget":"arale/widget/1.0.2/widget","switchable":"arale/switchable/0.9.11/switchable"},"tests":["tab"],"output":{"tab.js":"."}}
+    seajs._package = data = {"name":"tab","version":"1.0.0","root":"kjui","description":"tab","author":"Stone Lee <istonelee@gmail.com> (http://stonelee.info)","repository":{"type":"git","url":"https://github.com/stonelee/kjui-tab.git"},"bugs":{"url":"https://github.com/stonelee/kjui-tab/issues"},"dependencies":{"$":"$","widget":"arale/widget/1.0.2/widget","switchable":"arale/switchable/0.9.12/switchable"},"output":{"tab.js":"."}}
     data.dependencies && (delete data.dependencies['$'])
     data.devDependencies && (delete data.devDependencies['$'])
 
@@ -53,19 +53,20 @@
       <h1>
           <a href="./">Tab</a><sup class="package-root"><a href="/">kjui</a></sup>
       </h1>
-        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#kjui-tab" title="点击查看此组件发布情况">0.0.1</a></p>
+        <p class="version">当前版本：<a href="http://aralejs.org/docs/online-status.html#kjui-tab" title="点击查看此组件发布情况">1.0.0</a></p>
         <p class="description">tab</p>
+        <a class="source" href="https://github.com/stonelee/kjui-tab.git" target="_blank">View the Project</a>
         <ul id="navigation" role="navigation">
           <li><a href="./">文档</a></li>
           <li><a href="./examples/">演示</a></li>
-          <li><a class="test-link" href="tests/runner.html" target="_blank">用例</a></li>
+          <li><a class="issue-link" href="https://github.com/stonelee/kjui-tab/issues" target="_blank">讨论</a></li>
         </ul>
         
 
 <ul id="module-output"> 
 </ul>
 <div id="output-card">
-    <h3>kjui/tab/0.0.1/<a target="_blank" id="output-file"></a></h3>
+    <h3>kjui/tab/1.0.0/<a target="_blank" id="output-file"></a></h3>
     <p>这是模块的输出文件，请 require 或 seajs.use 以上 ID 来使用本文件，具体 API 请阅读文档。</p>
 </div>
 
@@ -75,7 +76,14 @@
 <article class="hentry">
   <h1 class="entry-title">tab</h1>
   <div class="entry-content">
-    
+    <p>tab组件，用于多页面切换</p>
+
+<hr/>
+
+<p>继承于switchable组件</p>
+
+<p>文档说明详见<a href="http://aralejs.org/switchable/">arale/switchable</a></p>
+
   </div>
 </article>
 </div>
