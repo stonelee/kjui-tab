@@ -11,19 +11,19 @@
   </ul>
   <div class="tab-strip"></div>
   <div class="tab-bd">
-    <div class="bd">a</div>
-    <div class="bd">b</div>
-    <div class="bd">c</div>
+    <div class="bd" style="display:none;">a</div>
+    <div class="bd" style="display:none;">b</div>
+    <div class="bd" style="display:none;">c</div>
   </div>
 </div>
 
 <script type="text/javascript">
 seajs.use(['tab'], function(Tab) {
-  tabs = new Tab({
+  new Tab({
     element: '#demo1',
     triggers: '.tab-nav li',
     panels: '.tab-bd div'
-  });
+  }).render();
 });
 </script>
 ````
@@ -39,9 +39,9 @@ seajs.use(['tab'], function(Tab) {
   </ul>
   <div class="tab-strip"></div>
   <div class="tab-bd" data-role="content">
-    <div class="bd">a</div>
-    <div class="bd">b</div>
-    <div class="bd">c</div>
+    <div class="bd" style="display:none;">a</div>
+    <div class="bd" style="display:none;">b</div>
+    <div class="bd" style="display:none;">c</div>
   </div>
 </div>
 
